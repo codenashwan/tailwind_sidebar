@@ -1,0 +1,14 @@
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+  <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-zinc-100 rounded-lg shadow flex-shrink-0" x-data="{ open: false }">
+    <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+      <a href="{{ route('admin') }}" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg">FOODIE HOTEL</a>
+      <button class="rounded-lg md:hidden" @click="open = !open">
+     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 8 8" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v1h8v-1h-8zm0 2.97v1h8v-1h-8zm0 3v1h8v-1h-8z" transform="translate(0 1)"></path></svg>
+      </button>
+    </div>
+    <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
+      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg" href="#">Contact</a>
+    </nav>
+  </div>
+</div>
